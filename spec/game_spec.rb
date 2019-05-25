@@ -6,7 +6,12 @@ require 'game'
    end
 
    it "returns zero if '\t\n' " do
-     scrabble = Scrabble.new('\t')
-     expect(scrabble.symbol('\t')).to eq 0
+     scrabble = Scrabble.new('\t\n')
+     expect(scrabble.symbol('\t\n')).to eq 0
+   end
+
+   it 'returns 0 if nil' do
+     scrabble =Scrabble.new('nil')
+     expect(scrabble.no_argument('nil')).to eq nil
    end
 end
