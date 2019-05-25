@@ -10,4 +10,10 @@ class Scrabble
      return 0
    end
   end
+
+  def symbol(char)
+    if char == '\t'
+      return 0
+    end
+  end
 end
