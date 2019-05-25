@@ -14,30 +14,16 @@ class Scrabble
     }
 
   end
-  def word(char)
-   if char == ''
-     return 0
-   end
-  end
-
-  def symbol(char)
-    if char == '\t\n'
-      return 0
-    end
-  end
-
-  def no_argument(char)
-    if char == nil
-      return 0
-    end
-  end
 
   def score
     total = 0
-    @word.upcase.split('').each do |char|
-      total += dictionary[char]
+    if @word == '' || @word == '\t\n' || @word == nil
+      return 0
+    elsif
+      @word.upcase.split('').each do |char|
+        total += dictionary[char]
+      end
+      total
     end
-    total
   end
-
 end
